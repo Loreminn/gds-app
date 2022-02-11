@@ -1,32 +1,75 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div>
+    <div class="links">
+      <router-link to="/">Главная</router-link>
+      <router-link to="todos">Задачи</router-link>
     </div>
     <router-view />
   </div>
 </template>
 
+<script>
+export default {
+  name: "App",
+  data() {
+    return {};
+  },
+};
+</script>
+
 <style>
+.links {
+  display: flex;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+.links a {
+  color: darkgray;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.links a.router-link-exact-active {
+  color: darkslategrey;
+  border-bottom: 1px solid darkslategrey;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  max-width: 800px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-#nav {
-  padding: 30px;
+.btn {
+  background-color: lightblue;
+  padding: 10px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.btn.filter {
+  background-color: aquamarine;
+  transition: background-color 0.2s ease-in-out;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.btn.clear {
+  background-color: chocolate;
+}
+
+.btn.filter.active {
+  background-color: forestgreen;
+  transition: background-color 0.2s ease-in-out;
 }
 </style>
