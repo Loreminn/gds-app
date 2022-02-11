@@ -35,7 +35,6 @@ export default new Vuex.Store({
     [TOGGLE_TODO_DONE]: (state, todoId) => {
       const currentTodo = state.todos.find((t) => t.id === todoId);
       currentTodo.done = !currentTodo.done;
-      console.log("saving");
       saveToLocalStorage("todos", state.todos); // тут вручную вызываю обновление LS, не знаю почему watch не срабатывает, наверное особенности реактивности Vue 2 и Vue 3
     },
     [DELETE_TODO]: (state, todoId) => {

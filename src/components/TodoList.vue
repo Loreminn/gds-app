@@ -31,7 +31,6 @@ export default {
   }),
   mounted() {
     const todos = getFromLocalStorage("todos");
-    console.log(todos);
     if (todos) {
       this.setTodos(todos);
     }
