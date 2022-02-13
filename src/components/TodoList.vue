@@ -38,16 +38,16 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .todo-list {
   max-width: 400px;
   width: 100%;
-}
 
-.todo-list__empty {
-  display: flex;
-  justify-content: center;
-  color: brown;
-  font-size: 16px;
+  &__empty {
+    display: flex;
+    justify-content: center;
+    color: brown;
+    font-size: 16px;
+  }
 }
 </style>

@@ -22,7 +22,6 @@ export default {
   display: flex;
   justify-content: center;
   font-family: "Inter", sans-serif;
-  font-family: "Roboto", sans-serif;
 }
 
 .links a {

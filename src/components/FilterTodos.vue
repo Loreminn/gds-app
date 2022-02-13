@@ -9,7 +9,11 @@
     >
       {{ filter }}
     </button>
-    <button class="btn clear" @click="clearHandler">
+    <button
+      v-if="completedTodos.length > 0"
+      class="btn clear"
+      @click="clearHandler"
+    >
       Очистить выполненные
     </button>
   </div>
@@ -30,6 +34,7 @@ export default {
   },
   computed: mapGetters({
     filterState: "currentFilterState",
+    completedTodos: "completedTodos",
   }),
   methods: {
     ...mapMutations({
